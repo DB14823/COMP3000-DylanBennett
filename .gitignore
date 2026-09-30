@@ -1,0 +1,37 @@
+# --- macOS ---
+.DS_Store
+Icon?
+
+# --- Xcode ---
+# Keep build output out of the repo (and out of OneDrive sync).
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+
+# --- Swift Package Manager ---
+.build/
+.swiftpm/
+Packages/*/.build/
+Packages/*/.swiftpm/
+
+# --- Python / ML (ml/) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+# Large datasets and training artefacts live on the training PC, not in git.
+ml/data/
+ml/checkpoints/
+ml/runs/
+*.pt
+*.pth
+*.onnx
+
+# --- Secrets ---
+*.env
+.env*

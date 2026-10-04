@@ -2,7 +2,7 @@
 
 **COMP3000 Computing Project — University of Plymouth, 2026–27**
 **Author:** Dylan Bennett
-**Supervisor:** Shaymaa Al-Juboori (to be confirmed by 12 October 2026)_
+**Supervisor:** Shaymaa Al-Juboori 
 
 ## Vision
 

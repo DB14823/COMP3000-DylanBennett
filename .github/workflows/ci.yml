@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  packages:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show toolchain
+        run: xcodebuild -version && swift --version
+      - name: Install tools for architecture check
+        run: brew install bash jq
+      - name: Architecture check
+        run: scripts/check-architecture.sh
+      - name: Test every package
+        run: |
+          for p in Packages/*/; do
+            echo "::group::$p"
+            swift test --package-path "$p"
+            echo "::endgroup::"
+          done
+
+  app:
+    runs-on: macos-latest
+    needs: packages
+    steps:
+      - uses: actions/checkout@v4
+            - name: Build app for simulator
+        run: |
+          xcodebuild -workspace Omnimonitor.xcworkspace -scheme Omnimonitor \
+            -destination 'generic/platform=iOS Simulator' build

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:App/Omnimonitor/Omnimonitor.xcodeproj">
+   </FileRef>
    <Group
       location = "group:Packages"
       name = "Packages">
@@ -39,4 +42,7 @@
          location = "group:check-architecture.sh">
       </FileRef>
    </Group>
+   <FileRef
+      location = "group:.github/workflows/ci.yml">
+   </FileRef>
 </Workspace>

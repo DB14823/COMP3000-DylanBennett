@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFF886D2307298DC00B6FDD4 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886D1307298DC00B6FDD4 /* Domain */; };
+		DFF886D4307298DC00B6FDD4 /* FoodVision in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886D3307298DC00B6FDD4 /* FoodVision */; };
+		DFF886D6307298DC00B6FDD4 /* LoopEngine in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886D5307298DC00B6FDD4 /* LoopEngine */; };
+		DFF886D8307298DC00B6FDD4 /* OrefAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886D7307298DC00B6FDD4 /* OrefAdapter */; };
+		DFF886DA307298DC00B6FDD4 /* Persistence in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886D9307298DC00B6FDD4 /* Persistence */; };
+		DFF886DC307298DC00B6FDD4 /* PumpPort in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886DB307298DC00B6FDD4 /* PumpPort */; };
+		DFF886DE307298DC00B6FDD4 /* SafetyKit in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886DD307298DC00B6FDD4 /* SafetyKit */; };
+		DFF886E6307298FA00B6FDD4 /* SimulationKit in Frameworks */ = {isa = PBXBuildFile; productRef = DFF886E5307298FA00B6FDD4 /* SimulationKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFF886B63072983700B6FDD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFF886A03072983600B6FDD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFF886A73072983600B6FDD4;
+			remoteInfo = Omnimonitor;
+		};
+		DFF886C03072983700B6FDD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFF886A03072983600B6FDD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFF886A73072983600B6FDD4;
+			remoteInfo = Omnimonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFF886A83072983600B6FDD4 /* Omnimonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omnimonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF886B53072983700B6FDD4 /* OmnimonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmnimonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF886BF3072983700B6FDD4 /* OmnimonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmnimonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF886E1307298DD00B6FDD4 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DFF886AA3072983600B6FDD4 /* Omnimonitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Omnimonitor;
+			sourceTree = "<group>";
+		};
+		DFF886B83072983700B6FDD4 /* OmnimonitorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OmnimonitorTests;
+			sourceTree = "<group>";
+		};
+		DFF886C23072983700B6FDD4 /* OmnimonitorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OmnimonitorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFF886A53072983600B6FDD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				DFF886D8307298DC00B6FDD4 /* OrefAdapter in Frameworks */,
+				DFF886DA307298DC00B6FDD4 /* Persistence in Frameworks */,
+				DFF886E6307298FA00B6FDD4 /* SimulationKit in Frameworks */,
+				DFF886DE307298DC00B6FDD4 /* SafetyKit in Frameworks */,
+				DFF886D4307298DC00B6FDD4 /* FoodVision in Frameworks */,
+				DFF886D2307298DC00B6FDD4 /* Domain in Frameworks */,
+				DFF886D6307298DC00B6FDD4 /* LoopEngine in Frameworks */,
+				DFF886DC307298DC00B6FDD4 /* PumpPort in Frameworks */,
+			);
+		};
+		DFF886B23072983700B6FDD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		DFF886BC3072983700B6FDD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFF8869F3072983600B6FDD4 = {
+			isa = PBXGroup;
+			children = (
+				DFF886AA3072983600B6FDD4 /* Omnimonitor */,
+				DFF886B83072983700B6FDD4 /* OmnimonitorTests */,
+				DFF886C23072983700B6FDD4 /* OmnimonitorUITests */,
+				DFF886D03072987F00B6FDD4 /* Frameworks */,
+				DFF886A93072983600B6FDD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFF886A93072983600B6FDD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFF886A83072983600B6FDD4 /* Omnimonitor.app */,
+				DFF886B53072983700B6FDD4 /* OmnimonitorTests.xctest */,
+				DFF886BF3072983700B6FDD4 /* OmnimonitorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFF886D03072987F00B6FDD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF886E1307298DD00B6FDD4 /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFF886A73072983600B6FDD4 /* Omnimonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF886C73072983700B6FDD4 /* Build configuration list for PBXNativeTarget "Omnimonitor" */;
+			buildPhases = (
+				DFF886A43072983600B6FDD4 /* Sources */,
+				DFF886A53072983600B6FDD4 /* Frameworks */,
+				DFF886A63072983600B6FDD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				DFF886AA3072983600B6FDD4 /* Omnimonitor */,
+			);
+			name = Omnimonitor;
+			packageProductDependencies = (
+				DFF886D1307298DC00B6FDD4 /* Domain */,
+				DFF886D3307298DC00B6FDD4 /* FoodVision */,
+				DFF886D5307298DC00B6FDD4 /* LoopEngine */,
+				DFF886D7307298DC00B6FDD4 /* OrefAdapter */,
+				DFF886D9307298DC00B6FDD4 /* Persistence */,
+				DFF886DB307298DC00B6FDD4 /* PumpPort */,
+				DFF886DD307298DC00B6FDD4 /* SafetyKit */,
+				DFF886E5307298FA00B6FDD4 /* SimulationKit */,
+			);
+			productName = Omnimonitor;
+			productReference = DFF886A83072983600B6FDD4 /* Omnimonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFF886B43072983700B6FDD4 /* OmnimonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF886CA3072983700B6FDD4 /* Build configuration list for PBXNativeTarget "OmnimonitorTests" */;
+			buildPhases = (
+				DFF886B13072983700B6FDD4 /* Sources */,
+				DFF886B23072983700B6FDD4 /* Frameworks */,
+				DFF886B33072983700B6FDD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFF886B73072983700B6FDD4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DFF886B83072983700B6FDD4 /* OmnimonitorTests */,
+			);
+			name = OmnimonitorTests;
+			productName = OmnimonitorTests;
+			productReference = DFF886B53072983700B6FDD4 /* OmnimonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DFF886BE3072983700B6FDD4 /* OmnimonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF886CD3072983700B6FDD4 /* Build configuration list for PBXNativeTarget "OmnimonitorUITests" */;
+			buildPhases = (
+				DFF886BB3072983700B6FDD4 /* Sources */,
+				DFF886BC3072983700B6FDD4 /* Frameworks */,
+				DFF886BD3072983700B6FDD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFF886C13072983700B6FDD4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DFF886C23072983700B6FDD4 /* OmnimonitorUITests */,
+			);
+			name = OmnimonitorUITests;
+			productName = OmnimonitorUITests;
+			productReference = DFF886BF3072983700B6FDD4 /* OmnimonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFF886A03072983600B6FDD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					DFF886A73072983600B6FDD4 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					DFF886B43072983700B6FDD4 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = DFF886A73072983600B6FDD4;
+					};
+					DFF886BE3072983700B6FDD4 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = DFF886A73072983600B6FDD4;
+					};
+				};
+			};
+			buildConfigurationList = DFF886A33072983600B6FDD4 /* Build configuration list for PBXProject "Omnimonitor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFF8869F3072983600B6FDD4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DFF886A93072983600B6FDD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFF886A73072983600B6FDD4 /* Omnimonitor */,
+				DFF886B43072983700B6FDD4 /* OmnimonitorTests */,
+				DFF886BE3072983700B6FDD4 /* OmnimonitorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFF886A63072983600B6FDD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		DFF886B33072983700B6FDD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		DFF886BD3072983700B6FDD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFF886A43072983600B6FDD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		DFF886B13072983700B6FDD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		DFF886BB3072983700B6FDD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFF886B73072983700B6FDD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFF886A73072983600B6FDD4 /* Omnimonitor */;
+			targetProxy = DFF886B63072983700B6FDD4 /* PBXContainerItemProxy */;
+		};
+		DFF886C13072983700B6FDD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFF886A73072983600B6FDD4 /* Omnimonitor */;
+			targetProxy = DFF886C03072983700B6FDD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DFF886C53072983700B6FDD4 /* Debug configuration for PBXProject "Omnimonitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFF886C63072983700B6FDD4 /* Release configuration for PBXProject "Omnimonitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFF886C83072983700B6FDD4 /* Debug configuration for PBXNativeTarget "Omnimonitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanbennett.Omnimonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFF886C93072983700B6FDD4 /* Release configuration for PBXNativeTarget "Omnimonitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanbennett.Omnimonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DFF886CB3072983700B6FDD4 /* Debug configuration for PBXNativeTarget "OmnimonitorTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanbennett.OmnimonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omnimonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Omnimonitor";
+			};
+			name = Debug;
+		};
+		DFF886CC3072983700B6FDD4 /* Release configuration for PBXNativeTarget "OmnimonitorTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanbennett.OmnimonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omnimonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Omnimonitor";
+			};
+			name = Release;
+		};
+		DFF886CE3072983700B6FDD4 /* Debug configuration for PBXNativeTarget "OmnimonitorUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanbennett.OmnimonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Omnimonitor;
+			};
+			name = Debug;
+		};
+		DFF886CF3072983700B6FDD4 /* Release configuration for PBXNativeTarget "OmnimonitorUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R8A35SURJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanbennett.OmnimonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Omnimonitor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFF886A33072983600B6FDD4 /* Build configuration list for PBXProject "Omnimonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF886C53072983700B6FDD4 /* Debug configuration for PBXProject "Omnimonitor" */,
+				DFF886C63072983700B6FDD4 /* Release configuration for PBXProject "Omnimonitor" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DFF886C73072983700B6FDD4 /* Build configuration list for PBXNativeTarget "Omnimonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF886C83072983700B6FDD4 /* Debug configuration for PBXNativeTarget "Omnimonitor" */,
+				DFF886C93072983700B6FDD4 /* Release configuration for PBXNativeTarget "Omnimonitor" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DFF886CA3072983700B6FDD4 /* Build configuration list for PBXNativeTarget "OmnimonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF886CB3072983700B6FDD4 /* Debug configuration for PBXNativeTarget "OmnimonitorTests" */,
+				DFF886CC3072983700B6FDD4 /* Release configuration for PBXNativeTarget "OmnimonitorTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		DFF886CD3072983700B6FDD4 /* Build configuration list for PBXNativeTarget "OmnimonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF886CE3072983700B6FDD4 /* Debug configuration for PBXNativeTarget "OmnimonitorUITests" */,
+				DFF886CF3072983700B6FDD4 /* Release configuration for PBXNativeTarget "OmnimonitorUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DFF886D1307298DC00B6FDD4 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		DFF886D3307298DC00B6FDD4 /* FoodVision */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FoodVision;
+		};
+		DFF886D5307298DC00B6FDD4 /* LoopEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoopEngine;
+		};
+		DFF886D7307298DC00B6FDD4 /* OrefAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OrefAdapter;
+		};
+		DFF886D9307298DC00B6FDD4 /* Persistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Persistence;
+		};
+		DFF886DB307298DC00B6FDD4 /* PumpPort */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PumpPort;
+		};
+		DFF886DD307298DC00B6FDD4 /* SafetyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SafetyKit;
+		};
+		DFF886E5307298FA00B6FDD4 /* SimulationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SimulationKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DFF886A03072983600B6FDD4 /* Project object */;
+	validationLevel = 1;
+}

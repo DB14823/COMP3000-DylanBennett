@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Packages"
+      name = "Packages">
+      <FileRef
+         location = "group:SimulationKit">
+      </FileRef>
+      <FileRef
+         location = "group:PumpPort">
+      </FileRef>
+      <FileRef
+         location = "group:Persistence">
+      </FileRef>
+      <FileRef
+         location = "group:OrefAdapter">
+      </FileRef>
+      <FileRef
+         location = "group:SafetyKit">
+      </FileRef>
+      <FileRef
+         location = "group:FoodVision">
+      </FileRef>
+      <FileRef
+         location = "group:Domain">
+      </FileRef>
+      <FileRef
+         location = "group:LoopEngine">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <Group
+      location = "group:scripts"
+      name = "scripts">
+      <FileRef
+         location = "group:check-architecture.sh">
+      </FileRef>
+   </Group>
+</Workspace>

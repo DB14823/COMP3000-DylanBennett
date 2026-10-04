@@ -1,7 +1,4 @@
-//
-//  TherapySettingsError.swift
-//  
-//
-//  Created by Dylan Bennett on 01/10/2026.
-//
-
+public enum TherapySettingsError: Error, Equatable, Sendable {
+    case fractionOutOfRange(Double)
+}
+                                        

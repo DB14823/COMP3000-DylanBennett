@@ -27,7 +27,7 @@ jobs:
     needs: packages
     steps:
       - uses: actions/checkout@v4
-            - name: Build app for simulator
+      - name: Build app for simulator
         run: |
           xcodebuild -workspace Omnimonitor.xcworkspace -scheme Omnimonitor \
             -destination 'generic/platform=iOS Simulator' build

@@ -32,6 +32,9 @@ ml/runs/
 *.pth
 *.onnx
 
+# --- Local Claude Code context (personal, not shared) ---
+CLAUDE.md
+
 # --- Secrets ---
 *.env
 .env*

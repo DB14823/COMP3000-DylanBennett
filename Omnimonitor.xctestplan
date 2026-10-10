@@ -12,7 +12,86 @@
 
   },
   "testTargets" : [
-
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/SimulationKit",
+        "identifier" : "SimulationKitTests",
+        "name" : "SimulationKitTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Omnimonitor.xcodeproj",
+        "identifier" : "DFF886B43072983700B6FDD4",
+        "name" : "OmnimonitorTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/Domain",
+        "identifier" : "DomainTests",
+        "name" : "DomainTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/Persistence",
+        "identifier" : "PersistenceTests",
+        "name" : "PersistenceTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/PumpPort",
+        "identifier" : "PumpPortTests",
+        "name" : "PumpPortTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/LoopEngine",
+        "identifier" : "LoopEngineTests",
+        "name" : "LoopEngineTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/FoodVision",
+        "identifier" : "FoodVisionTests",
+        "name" : "FoodVisionTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/SafetyKit",
+        "identifier" : "SafetyKitTests",
+        "name" : "SafetyKitTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:..\/..\/Packages\/OrefAdapter",
+        "identifier" : "OrefAdapterTests",
+        "name" : "OrefAdapterTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:Omnimonitor.xcodeproj",
+        "identifier" : "DFF886BE3072983700B6FDD4",
+        "name" : "OmnimonitorUITests"
+      }
+    }
   ],
   "version" : 1
 }

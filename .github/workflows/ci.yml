@@ -11,16 +11,9 @@ jobs:
       - name: Show toolchain
         run: xcodebuild -version && swift --version
       - name: Install tools for architecture check
-        run: brew install bash jq
-      - name: Architecture check
-        run: scripts/check-architecture.sh
-      - name: Test every package
-        run: |
-          for p in Packages/*/; do
-            echo "::group::$p"
-            swift test --package-path "$p"
-            echo "::endgroup::"
-          done
+        run: brew install jq
+      - name: Architecture check and package tests
+        run: scripts/check-local.sh packages
 
   app:
     runs-on: xcode-27
@@ -28,6 +21,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build app for simulator
-        run: |
-          xcodebuild -workspace Omnimonitor.xcworkspace -scheme Omnimonitor \
-            -destination 'generic/platform=iOS Simulator' build
+        run: scripts/check-local.sh app

@@ -12,3 +12,19 @@ This iOS app aims to reduce the burden on those with type 1 diabetes by connecti
 No insulin is given until the user approves it. Evaluations will be carried out to test the accuracy of carbohydrate estimates and whether insulin dosing stays safe when the estimates are not perfect.
 
 > ⚠️ Research project. This software is not a medical device and is not approved for clinical use.
+
+## Development
+
+Read [AGENTS.md](AGENTS.md) for project instructions and academic boundaries.
+Dylan makes all commits; assistant access to GitHub is read-only.
+
+From the repository root, run `scripts/check-local.sh packages` for architecture
+checks and all package tests, or `scripts/check-local.sh app` for a simulator app
+build. For focused work, use
+`swift test --package-path Packages/<Name> --scratch-path Packages/<Name>/.build/cli`.
+CLI tests use a separate ignored build directory from Xcode.
+The check scripts and CI configuration are AI-assisted tooling.
+
+The [Sprint 0b spike workflow](docs/spikes/README.md) includes experiment sheets
+for oref, Vision masks, LiDAR, and the training environment. Dylan supplies the
+implementation and measured findings.

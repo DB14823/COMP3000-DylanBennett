@@ -1,0 +1,227 @@
+diff --git a/AlgorithmPackage/Package.swift b/AlgorithmPackage/Package.swift
+index 8c62a5bfa..f3ac7f074 100644
+--- a/AlgorithmPackage/Package.swift
++++ b/AlgorithmPackage/Package.swift
+@@ -53,7 +53,7 @@ let algorithmHelpers = [
+ let package = Package(
+     name: "TrioAlgorithm",
+     defaultLocalization: "en",
+-    platforms: [.macOS(.v14)],
++    platforms: [.iOS("18.0"), .macOS(.v14)],
+     products: [
+         .library(name: "Trio", targets: ["Trio"])
+     ],
+@@ -61,6 +61,7 @@ let package = Package(
+         .target(
+             name: "Trio",
+             path: "Sources",
++            exclude: ["Localizations"],
+             sources: [
+                 "APS/OpenAPSSwift",
+                 "APS/Extensions/DecimalExtensions.swift"
+diff --git a/Trio/Sources/APS/OpenAPSSwift/DetermineBasal/DetermineBasalGenerator.swift b/Trio/Sources/APS/OpenAPSSwift/DetermineBasal/DetermineBasalGenerator.swift
+index a88d9d171..44d35bf58 100644
+--- a/Trio/Sources/APS/OpenAPSSwift/DetermineBasal/DetermineBasalGenerator.swift
++++ b/Trio/Sources/APS/OpenAPSSwift/DetermineBasal/DetermineBasalGenerator.swift
+@@ -7,7 +7,7 @@ protocol OverrideHandler {
+     /// This could also possibly be handled via an extension of our existing `ProfileGenerator` (?)
+ }
+ 
+-enum DeterminationGenerator {
++ enum DeterminationGenerator {
+     // override data can just be fetched from the DB
+     // handling via overrideManager ?
+ 
+diff --git a/Trio/Sources/APS/OpenAPSSwift/OrefSpikeBridge.swift b/Trio/Sources/APS/OpenAPSSwift/OrefSpikeBridge.swift
+new file mode 100644
+index 000000000..8bfd4ce59
+--- /dev/null
++++ b/Trio/Sources/APS/OpenAPSSwift/OrefSpikeBridge.swift
+@@ -0,0 +1,187 @@
++import Foundation
++
++public enum OrefSpikeBridge {
++    
++    private enum FixtureCheckError: Error {
++        case unexpectedResult(String)
++    }
++    
++    public static func runFixture() throws -> String {
++        let inputs = createDefaultInputs()
++        let currentTime = inputs.currentTime
++        let glucoseTime = currentTime.addingTimeInterval(-15 * 60)
++        let glucoseStatus = GlucoseStatus(
++            delta: 0,
++            glucose: 115,
++            noise: 1,
++            shortAvgDelta: 0,
++            longAvgDelta: 0.1,
++            date: glucoseTime,
++            lastCalIndex: nil,
++            device: "test"
++        )
++        
++        let currentTemp = TempBasal(duration: 60, rate: 0, temp: .absolute, timestamp: currentTime)
++        
++        let result = try DeterminationGenerator.determineBasal(
++            profile: inputs.profile,
++            preferences: inputs.preferences,
++            currentTemp: currentTemp,
++            iobData: inputs.iobData,
++            mealData: inputs.mealData,
++            autosensData: inputs.autosensData,
++            reservoirData: inputs.reservoirData,
++            glucoseStatus: glucoseStatus,
++            microBolusAllowed: inputs.microBolusAllowed,
++            trioCustomOrefVariables: inputs.trioCustomOrefVariables,
++            currentTime: currentTime
++        )
++        
++        guard result?.rate == 0,
++              result?.duration == 30,
++              result?.reason.contains("Shortening") == true else {
++            throw FixtureCheckError.unexpectedResult(
++                String(describing: result)
++            )
++        }
++        
++        return String (describing: result)
++    }
++    // Fixture adapted from Trio v1.0:
++    // TrioTests/OpenAPSSwiftTests/DetermineBasalEarlyExitTests.swift
++    // Changes: static helper and fixed default timestamp.
++    private static func createDefaultInputs(
++        currentTime: Date = Date(timeIntervalSince1970: 1_700_000_000)
++    ) -> (
++        profile: Profile,
++        preferences: Preferences,
++        currentTemp: TempBasal,
++        iobData: [IobResult],
++        mealData: ComputedCarbs,
++        autosensData: Autosens,
++        reservoirData: Decimal,
++        glucoseStatus: GlucoseStatus,
++        microBolusAllowed: Bool,
++        trioCustomOrefVariables: TrioCustomOrefVariables,
++        currentTime: Date
++    ) {
++        var profile = Profile()
++        profile.maxIob = 2.5
++        profile.dia = 3
++        profile.currentBasal = 0.9
++        profile.maxDailyBasal = 1.3
++        profile.maxBasal = 3.5
++        profile.maxBg = 120
++        profile.minBg = 110
++        profile.sens = 40
++        profile.carbRatio = 10
++        profile.thresholdSetting = 80
++        profile.temptargetSet = false
++        profile.bolusIncrement = 0.1
++        profile.useCustomPeakTime = false
++        profile.curve = .rapidActing
++        
++        var preferences = Preferences()
++        preferences.useNewFormula = false
++        preferences.sigmoid = false
++        preferences.adjustmentFactor = 0.8
++        preferences.adjustmentFactorSigmoid = 0.5
++        preferences.curve = .rapidActing
++        preferences.useCustomPeakTime = false
++        
++        let currentTemp = TempBasal(duration: 0, rate: 0, temp: .absolute, timestamp: currentTime)
++        
++        let iobData = [IobResult(
++            iob: 0,
++            activity: 0,
++            basaliob: 0,
++            bolusiob: 0,
++            netbasalinsulin: 0,
++            bolusinsulin: 0,
++            time: currentTime,
++            iobWithZeroTemp: IobResult.IobWithZeroTemp(
++                iob: 0,
++                activity: 0,
++                basaliob: 0,
++                bolusiob: 0,
++                netbasalinsulin: 0,
++                bolusinsulin: 0,
++                time: currentTime
++            ),
++            lastBolusTime: nil,
++            lastTemp: IobResult.LastTemp(
++                rate: 0,
++                timestamp: currentTime,
++                started_at: currentTime,
++                date: UInt64(currentTime.timeIntervalSince1970 * 1000),
++                duration: 30
++            )
++        )]
++        
++        let mealData = ComputedCarbs(
++            carbs: 0,
++            mealCOB: 0,
++            currentDeviation: 0,
++            maxDeviation: 0,
++            minDeviation: 0,
++            slopeFromMaxDeviation: 0,
++            slopeFromMinDeviation: 0,
++            allDeviations: [0, 0, 0, 0, 0],
++            lastCarbTime: 0
++        )
++        
++        let autosensData = Autosens(ratio: 1.0, newisf: nil)
++        
++        let glucoseStatus = GlucoseStatus(
++            delta: 0,
++            glucose: 115,
++            noise: 1,
++            shortAvgDelta: 0,
++            longAvgDelta: 0.1,
++            date: currentTime,
++            lastCalIndex: nil,
++            device: "test"
++        )
++        
++        let trioCustomOrefVariables = TrioCustomOrefVariables(
++            average_total_data: 0,
++            weightedAverage: 0,
++            currentTDD: 0,
++            past2hoursAverage: 0,
++            date: currentTime,
++            overridePercentage: 100,
++            useOverride: false,
++            duration: 0,
++            unlimited: false,
++            overrideTarget: 0,
++            smbIsOff: false,
++            advancedSettings: false,
++            isfAndCr: false,
++            isf: false,
++            cr: false,
++            smbIsScheduledOff: false,
++            start: 0,
++            end: 0,
++            smbMinutes: 30,
++            uamMinutes: 30
++        )
++        
++        return (
++            profile: profile,
++            preferences: preferences,
++            currentTemp: currentTemp,
++            iobData: iobData,
++            mealData: mealData,
++            autosensData: autosensData,
++            reservoirData: 100,
++            glucoseStatus: glucoseStatus,
++            microBolusAllowed: true,
++            trioCustomOrefVariables: trioCustomOrefVariables,
++            currentTime: currentTime
++        )
++    }
++    
++    
++}
++
++

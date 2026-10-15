@@ -45,7 +45,4 @@
    <FileRef
       location = "group:.github/workflows/ci.yml">
    </FileRef>
-   <FileRef
-      location = "group:Omnimonitor.xctestplan">
-   </FileRef>
 </Workspace>

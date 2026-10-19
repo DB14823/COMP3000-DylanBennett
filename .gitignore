@@ -36,6 +36,10 @@ ml/runs/
 CLAUDE.md
 AGENTS.md
 
+# Downloaded models and CocoaPods dependencies
+*.tflite
+Pods/
+
 # --- Secrets ---
 *.env
 .env*

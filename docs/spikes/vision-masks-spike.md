@@ -33,5 +33,10 @@ Consistent manual cropping did produce improved results, although these were dev
 
 ## Decision
 After testing a set of 40 images from the dataset, as well as a separate set of the same images after cropping them, I will be going ahead with using this segmentation model. The results of this experiment can be found in '/Users/dylan/Uni/COMP3000/Docs/Food segmenter obs.xlsx' and evidence that cropping is  beneficial in this sample, however correctly masking each individual food is still rather unreliable, and users may have to manually correct food labels/merged regions. 
-Running the model on iOS, and using it for volume estimation remains untested.
+Running the model on iOS via TensorFlow Lite Swift 2.17.0 demonstrates visually similar results with running python script directly. compatability test used:
+- Image id - dish\_1563555563
+- iPhone 15 pro simulator 
+- Simulator ran iOS 27.0
+
+Results remained consistent with original observations, physical device accuracy and volume estimations remain untested.
 

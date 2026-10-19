@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		98930EEB8AB646627B84E311 /* Pods_FoodSegmenterIOSSpike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3523A97A8B720A74B3AE1A /* Pods_FoodSegmenterIOSSpike.framework */; };
 		FC338FDE30867499008D5CCA /* 1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FC338FDD30867499008D5CCA /* 1.tflite */; };
+		FC338FE63086AABB008D5CCA /* dish_1563555563.png in Resources */ = {isa = PBXBuildFile; fileRef = FC338FE53086AABB008D5CCA /* dish_1563555563.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		907A920E6859BCC840FC67E4 /* Pods-FoodSegmenterIOSSpike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodSegmenterIOSSpike.debug.xcconfig"; path = "Target Support Files/Pods-FoodSegmenterIOSSpike/Pods-FoodSegmenterIOSSpike.debug.xcconfig"; sourceTree = "<group>"; };
 		C8402FEFDDBA0B0CD2ED0625 /* Pods-FoodSegmenterIOSSpike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodSegmenterIOSSpike.release.xcconfig"; path = "Target Support Files/Pods-FoodSegmenterIOSSpike/Pods-FoodSegmenterIOSSpike.release.xcconfig"; sourceTree = "<group>"; };
 		FC338FDD30867499008D5CCA /* 1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.tflite; path = "../../../../Data/vision-masks/models/1.tflite"; sourceTree = "<group>"; };
+		FC338FE53086AABB008D5CCA /* dish_1563555563.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dish_1563555563.png; path = "../../../../Data/vision-masks/Evaluation/Cropped Images/dish_1563555563.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -42,6 +44,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				FC338FE53086AABB008D5CCA /* dish_1563555563.png */,
 				FC338FDD30867499008D5CCA /* 1.tflite */,
 				000000000000000000000010 /* FoodSegmenterIOSSpike */,
 				000000000000000000000020 /* Products */,
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC338FE63086AABB008D5CCA /* dish_1563555563.png in Resources */,
 				FC338FDE30867499008D5CCA /* 1.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

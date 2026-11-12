@@ -31,6 +31,13 @@ struct InsulinDeliveryGuardTests {
         }
     }
 
+    private struct FixedClock: LoopClock {
+        let date: Date
+        func now() -> Date {
+            return date
+        }
+    }
+
     @Test
     func rejectsOversizedBolusWithoutCallingPump() async throws {
         let pump = RecordingPump()
@@ -38,9 +45,13 @@ struct InsulinDeliveryGuardTests {
             maxBolus: try InsulinUnits(units: 2.0),
             maxIOB: try InsulinUnits(units: 10.0)
         )
+        let clock = FixedClock(
+            date: Date(timeIntervalSince1970: 1_700_000_000)
+        )
         let deliveryGuard = InsulinDeliveryGuard(
             limits: limits,
-            pump: pump
+            pump: pump,
+            clock: clock
         )
         let request = try DoseRequest(
             id: UUID(),
@@ -63,9 +74,13 @@ struct InsulinDeliveryGuardTests {
             maxBolus: try InsulinUnits(units: 2.0),
             maxIOB: try InsulinUnits(units: 10.0)
         )
+        let clock = FixedClock(
+            date: Date(timeIntervalSince1970: 1_700_000_000)
+        )
         let deliveryGuard = InsulinDeliveryGuard(
             limits: limits,
-            pump: pump
+            pump: pump,
+            clock: clock
         )
         let request = try DoseRequest(
             id: UUID(),
@@ -80,4 +95,32 @@ struct InsulinDeliveryGuardTests {
         let attempts = await pump.deliveryCallCount
         #expect(attempts == 0)
     }
+
+    @Test
+    func rejectsFutureRequestWithoutCallingPump() async throws {
+        let pump = RecordingPump()
+        let limits = SafetyLimits(
+            maxBolus: try InsulinUnits(units: 2.0),
+            maxIOB: try InsulinUnits(units: 10.0)
+        )
+        let now = Date(timeIntervalSince1970: 1_700_000_000)
+        let clock = FixedClock(date: now)
+        let deliveryGuard = InsulinDeliveryGuard(
+            limits: limits,
+            pump: pump,
+            clock: clock
+        )
+        let request = try DoseRequest(
+            id: UUID(),
+            amount: try InsulinUnits(units: 1.0),
+            createdAt: now.addingTimeInterval(60)
+        )
+
+        await #expect(throws: SafetyRejection.invalidRequestTime) {
+            try await deliveryGuard.deliver(request)
+        }
+        let attempts = await pump.deliveryCallCount
+        #expect(attempts == 0)
+    }
+
 }

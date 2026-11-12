@@ -5,4 +5,5 @@ public enum SafetyRejection: Error, Sendable, Equatable {
     case pumpUnavailable
     case deliveryPending
     case confirmationRequired
+    case invalidRequestTime
 }

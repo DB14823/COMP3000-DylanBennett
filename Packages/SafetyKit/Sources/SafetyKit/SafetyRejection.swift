@@ -6,4 +6,5 @@ public enum SafetyRejection: Error, Sendable, Equatable {
     case deliveryPending
     case confirmationRequired
     case invalidRequestTime
+    case insufficientHistory
 }
